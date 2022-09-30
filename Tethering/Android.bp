@@ -42,7 +42,7 @@ java_defaults {
         "net-utils-device-common",
         "netd-client",
         "NetworkStackApiCurrentShims",
-        "org.portalrom.platform.portalromsettings",
+        "org.lineageos.platform.lineagesettings",
     ],
     libs: [
         "framework-connectivity",

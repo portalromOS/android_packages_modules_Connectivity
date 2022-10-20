@@ -156,7 +156,7 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
-import lineageos.providers.LineageSettings;
+import portalrom.providers.PortalRomSettings;
 
 /**
  *
@@ -440,8 +440,8 @@ public class Tethering {
                 mTetherMainSM.sendMessage(TetherMainSM.CMD_UPSTREAM_CHANGED);
             }
         };
-        mContext.getContentResolver().registerContentObserver(LineageSettings.Secure.getUriFor(
-                LineageSettings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS), false, vpnSettingObserver);
+        mContext.getContentResolver().registerContentObserver(PortalRomSettings.Secure.getUriFor(
+                PortalRomSettings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS), false, vpnSettingObserver);
     }
 
     private class TetheringThreadExecutor implements Executor {

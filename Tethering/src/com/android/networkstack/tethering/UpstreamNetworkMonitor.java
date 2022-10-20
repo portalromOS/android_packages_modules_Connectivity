@@ -56,7 +56,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import lineageos.providers.LineageSettings;
+import portalrom.providers.PortalRomSettings;
 
 
 /**
@@ -335,8 +335,8 @@ public class UpstreamNetworkMonitor {
     public UpstreamNetworkState getCurrentPreferredUpstream() {
         // Use VPN upstreams if hotspot settings allow.
         if (mVpnInternetNetwork != null &&
-                LineageSettings.Secure.getInt(mContext.getContentResolver(),
-                        LineageSettings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS, 0) == 1) {
+                PortalRomSettings.Secure.getInt(mContext.getContentResolver(),
+                        PortalRomSettings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS, 0) == 1) {
             return mNetworkMap.get(mVpnInternetNetwork);
         }
         final UpstreamNetworkState dfltState = (mDefaultInternetNetwork != null)
